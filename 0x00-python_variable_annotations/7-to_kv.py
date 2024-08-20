@@ -3,9 +3,11 @@
     7-to_kv.py: Complex types - string and int/float to tuple
 
 """
-from typing import Tuple
 
-def to_kv(k: str, v: int | float) -> Tuple(str, float):
+from typing import Tuple, Union
+
+
+def to_kv(k: str, v: Union[int, float]) -> Tuple(str, float):
     """
         - Args:
             - k: the string

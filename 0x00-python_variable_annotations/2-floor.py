@@ -6,7 +6,7 @@
 import math
 
 
-def floor(n: float) -> float:
+def floor(n: float) -> math.floor:
     """
         Return: floor of n
 

@@ -4,10 +4,10 @@
 
 """
 
-from typing import Tuple, Union
+from typing import Tuple, Union, List
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple([str, float]):
+def to_kv(k: str, v: Union[int, float]) -> Tuple(List[str, float]):
     """
         - Args:
             - k: the string

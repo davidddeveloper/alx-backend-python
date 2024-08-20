@@ -13,9 +13,9 @@ async def wait_n(n: int, max_delay: int) -> list[float]:
         async routine that return the list of all the delays by wait_random
     """
 
-    delays: list = []
+    delays = []
     for _ in range(n):
-        delay: float = await wait_random(max_delay)
+        delay = await wait_random(max_delay)
         delays.append(delay)
 
     return delays

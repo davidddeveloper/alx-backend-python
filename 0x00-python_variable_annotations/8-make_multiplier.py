@@ -6,7 +6,7 @@
 from typing import Callable
 
 
-def make_multiplier(multiplier: float) -> Callable[[float]]:
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
         - Args:
             - multiplier: float
@@ -15,7 +15,7 @@ def make_multiplier(multiplier: float) -> Callable[[float]]:
 
     """
 
-    def mp(mtip):
+    def mp(mtip: float):
         return mtip * multiplier
 
     return mp

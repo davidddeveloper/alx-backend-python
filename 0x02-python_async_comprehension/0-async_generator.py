@@ -5,10 +5,10 @@
 """
 import asyncio
 import random
-from typing import AsyncIterator
+from typing import AsyncGenerator
 
 
-async def async_generator() -> AsyncIterator[float]:
+async def async_generator() -> AsyncGenerator[float, None]:
     """
         loop 10 times
         asynchronously wait 1 second

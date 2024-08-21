@@ -7,3 +7,20 @@ In the context of python, Variable Annotation is a way of telling whoever is rea
 `dynamically typed` - In contrast to statically typed languages like C, Python is dynamically typed and what that means is - the type is determined at run time upon assignment of a value and a variable that hold say float can be change elsewhere to int. - `documentation`
 
 `Note` - python does not enforce it annotation. However, python annotation can be enforced by third party tools/code like linters or code editors. - `validation`
+
+## examples
+`variables`
+> first_name: str = 'David'
+
+`function`
+
+      def get_name(name: str) -> str:
+        print(name)
+
+    > from typing import Union
+    > def get_name_or_age(name_or_age: Union[str, int]) -> Union[str, int]:
+    >   print(name_or_age)
+
+> `#` newer version of python
+> def get_name_or_age(name_or_age: str | int) -> str | int:
+>   print(name_or_age)

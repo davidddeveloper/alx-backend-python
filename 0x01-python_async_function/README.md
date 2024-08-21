@@ -7,3 +7,8 @@ asyncronous code is a style of programming implemented across a wide range of pr
 > `async/await` are python keywords that let's us define coroutines.
 
 > `coroutines` is a function that is awaitable, it can pause and cede (give up) control to event loop, so that other task that a ready to execute can then run.
+
+> Asyncio uses event loop to give you the feel of concurrency.
+
+> `event loop & how I understand it` - keeps track of all task that are running or needs to run, loop through all of them and give control to the ones that are ready to run until everything is excuted.<br><br>
+for a more detail explanation of event loops and how asyncio uses it to perform concurrency read [this](https://www.pythontutorial.net/python-concurrency/python-event-loop/)

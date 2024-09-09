@@ -8,6 +8,7 @@ from parameterized import parameterized
 import utils
 from utils import access_nested_map
 
+
 class TestAccessNestedMap(unittest.TestCase):
     """
         Represent a test case

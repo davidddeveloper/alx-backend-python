@@ -6,7 +6,6 @@
 import unittest
 from parameterized import parameterized
 from utils import access_nested_map
-from utils import get_json
 
 
 class TestAccessNestedMap(unittest.TestCase):
@@ -48,4 +47,7 @@ class TestGetJson(unittest.TestCase):
     def test_get_json(self, url, payload, mock_get_json):
         mock_get_json.return_value = payload
 
-        self.assertEqual(mock_get_json(url), payload)
+        result = mock_get_json(url)
+        mock_get_json.assert_called_once()
+
+        self.assertEqual(result, payload)

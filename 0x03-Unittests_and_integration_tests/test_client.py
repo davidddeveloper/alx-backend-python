@@ -30,7 +30,8 @@ class TestGithubOrgClient(unittest.TestCase):
 
         client = GithubOrgClient(org)
 
-        result = client.org()
+        result = client.org
+        print(result)
 
         mock_get_json.assert_called_once_with(payload)
 

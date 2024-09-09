@@ -3,9 +3,11 @@
     test_utils.py: these are tests to test utils.py
 
 """
+
 import unittest
-from parameterized import parameterized
 import utils
+from typing import Dict
+from parameterized import parameterized
 from utils import access_nested_map
 
 
@@ -41,7 +43,7 @@ class TestAccessNestedMap(unittest.TestCase):
 
 class TestGetJson(unittest.TestCase):
     """
-        Represent a Test case for utils.get_json
+        Represent a Test case for utils.get_json method
 
     """
     @parameterized.expand([
@@ -49,9 +51,10 @@ class TestGetJson(unittest.TestCase):
         ("http://holberton.io", {"payload": False})
     ])
     @unittest.mock.patch("utils.get_json")
-    def test_get_json(self, url, payload, mock_get_json):
+    def test_get_json(self, url: str, payload: Dict, mock_get_json):
         """
             parameterized a patch mock object for utils.get_json
+
         """
         mock_get_json.return_value = payload
 

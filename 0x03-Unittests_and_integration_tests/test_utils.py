@@ -52,10 +52,9 @@ class TestGetJson(unittest.TestCase):
         """
             parameterized a patch mock object for utils.get_json
         """
-        mock_get_json.json = payload
         mock_get_json.return_value = payload
 
         result = utils.get_json(url)
-        mock_get_json.assert_called_once()
 
+        mock_get_json.assert_called_once_with(url)
         self.assertEqual(result, payload)
